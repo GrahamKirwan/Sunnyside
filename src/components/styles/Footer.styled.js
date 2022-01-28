@@ -6,7 +6,6 @@ export const StyledFooter = styled.div`
   padding: 50px;
 
   nav {
-    
 
     ul {
       list-style: none;
