@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const StyledTestimonials = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
 
-  height: 600px;
-  padding: 100px 150px;
+  
+  padding: 150px 150px;
   text-align: center;
 
   h3 {

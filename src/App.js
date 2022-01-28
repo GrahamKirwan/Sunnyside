@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import InfoSection from "./components/InfoSection";
 import Tiles from "./components/Tiles";
 import Testimonials from "./components/Testimonials";
+import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
 
 const theme = {
   colors: {
@@ -80,7 +82,9 @@ const testimonials = [
     position: 'Business Owner',
     image: '../assets/image-jennie.jpg'
   },
-]
+];
+
+const imageGallery = ['../assets/desktop/image-gallery-milkbottles.jpg', '../assets/desktop/image-gallery-orange.jpg', '../assets/desktop/image-gallery-cone.jpg', '../assets/desktop/image-gallery-sugarcubes.jpg']
 
 function App() {
   return (
@@ -92,6 +96,8 @@ function App() {
       ))}
       <Tiles data={infoData2}/>
       <Testimonials data={testimonials} />
+      <Gallery images={imageGallery} />
+      <Footer />
     </ThemeProvider>
   );
 }
