@@ -10,6 +10,7 @@ export const StyledHeader = styled.header `
     height: 100vh;
     background-image: url("../assets/desktop/image-header.jpg");
     background-size: cover;
+    background-position: center;
     font-family: 'Barlow', serif;
 
 
@@ -17,6 +18,14 @@ export const StyledHeader = styled.header `
         font-size: 100px;
         color: ${({theme}) => theme.colors.white};
         font-family: 'Fraunces', serif;
+        text-align: center;
+        
+
+        @media (max-width: ${({ theme }) => theme.mobile}){
+      font-size: 50px;
+      letter-spacing: 5px;
+
+  }
     }
 
     div {
@@ -25,6 +34,11 @@ export const StyledHeader = styled.header `
         justify-content: center;
         align-items: center;
     }
+
+    @media (max-width: ${({ theme }) => theme.mobile}){
+    background-image: url("../assets/mobile/image-header.jpg");
+        height: 80vh;
+  }
 `
 
 export const Nav = styled.nav `
@@ -47,6 +61,10 @@ export const List = styled.ul `
         padding-left: 25px;
         text-decoration: none;
     }
+
+    @media (max-width: ${({ theme }) => theme.mobile}){
+      display: none;
+  }
 `
 
 export const Button = styled.a `

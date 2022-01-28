@@ -4,29 +4,23 @@ import {
   ImageContainer,
 } from "./styles/InfoSection.styled";
 
+
 function InfoSection(props) {
-  let color = props.data.color;
 
   return (
-    <StyledInfo>
-      {props.data.id % 2 === 0 && (
-        <ImageContainer>
-          <img src={props.data.image}></img>
-        </ImageContainer>
-      )}
+
+    <StyledInfo layout={props.data.id % 2 === 0 && 'row-reverse'}>
+      <ImageContainer image={props.data.image} imageMobile={props.data.imageMobile} />
+
       <div>
         <Content>
           <h2>{props.data.title}</h2>
           <p>{props.data.para}</p>
-          <a href="#" color={color}>Learn more</a>
+          <a href="#" color={props.data.color}>
+            Learn more
+          </a>
         </Content>
       </div>
-
-      {props.data.id % 2 !== 0 && (
-        <ImageContainer>
-          <img src={props.data.image}></img>
-        </ImageContainer>
-      )}
     </StyledInfo>
   );
 }

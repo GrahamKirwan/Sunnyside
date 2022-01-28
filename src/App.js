@@ -18,6 +18,7 @@ const theme = {
     footer: "hsl(168, 34%, 41%)",
   },
   mobile: "768px",
+  mobileNum: 768,
 };
 
 const infoData = [
@@ -26,14 +27,16 @@ const infoData = [
     title: "Transform your brand",
     para: "We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.",
     color: theme.colors.yellow,
-    image: "../assets/desktop/image-transform.jpg",
+    image: 'url("../assets/desktop/image-transform.jpg")',
+    imageMobile: 'url("../assets/mobile/image-transform.jpg")'
   },
   {
     id: 2,
     title: "Stand out to the right audience",
     para: "Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.",
     color: theme.colors.red,
-    image: "../assets/desktop/image-stand-out.jpg",
+    image: 'url("../assets/desktop/image-stand-out.jpg")',
+    imageMobile: 'url("../assets/mobile/image-stand-out.jpg")'
   },
 ];
 
@@ -43,7 +46,7 @@ function App() {
       <GlobalStyles />
       <Header></Header>
       {infoData.map((mapping, index) => (
-        <InfoSection key={index} data={mapping} />
+        <InfoSection key={index} data={mapping} theme={theme}/>
       ))}
     </ThemeProvider>
   );
