@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/styles/Global";
 import Header from "./components/Header";
 import InfoSection from "./components/InfoSection";
+import Tiles from "./components/Tiles";
 
 const theme = {
   colors: {
@@ -37,17 +38,33 @@ const infoData = [
     color: theme.colors.red,
     image: 'url("../assets/desktop/image-stand-out.jpg")',
     imageMobile: 'url("../assets/mobile/image-stand-out.jpg")'
-  },
+  }
 ];
+
+const infoData2 = [
+  {
+    title: "Graphic Design",
+    para: "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.",
+    image: 'url("../assets/desktop/image-graphic-design.jpg")',
+    imageMobile: 'url("../assets/mobile/image-graphic-design.jpg")'
+  },
+  {
+    title: "Photography",
+    para: "Increase your credibility by getting the most stunning, high-quality photos that improve your business image.",
+    image: 'url("../assets/desktop/image-photography.jpg")',
+    imageMobile: 'url("../assets/mobile/image-photography.jpg")'
+  },
+]
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Header></Header>
+      <Header />
       {infoData.map((mapping, index) => (
         <InfoSection key={index} data={mapping} theme={theme}/>
       ))}
+      <Tiles data={infoData2}/>
     </ThemeProvider>
   );
 }

@@ -68,12 +68,17 @@ export const List = styled.ul `
 `
 
 export const Button = styled.a `
-    color: #000 !important;
+    color: ${({theme}) => theme.colors.blue2} !important;
     background-color: #fff;
     padding: 15px 30px !important;
     margin-left: 25px;
     border-radius: 100px;
     text-transform: uppercase;
     font-family: 'Fraunces', serif;
+
+    &:hover {
+        color: ${({theme}) => theme.colors.white} !important;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
 
 `
