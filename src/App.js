@@ -4,6 +4,7 @@ import GlobalStyles from "./components/styles/Global";
 import Header from "./components/Header";
 import InfoSection from "./components/InfoSection";
 import Tiles from "./components/Tiles";
+import Testimonials from "./components/Testimonials";
 
 const theme = {
   colors: {
@@ -20,6 +21,7 @@ const theme = {
   },
   mobile: "768px",
   mobileNum: 768,
+  tablet: "1000px"
 };
 
 const infoData = [
@@ -54,6 +56,30 @@ const infoData2 = [
     image: 'url("../assets/desktop/image-photography.jpg")',
     imageMobile: 'url("../assets/mobile/image-photography.jpg")'
   },
+];
+
+const testimonials = [
+  {
+    id: 1,
+    name: 'Emily R.',
+    para: 'We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.',
+    position: 'Marketing Director',
+    image: '../assets/image-emily.jpg'
+  },
+  {
+    id: 2,
+    name: 'Thomas S.',
+    para: 'Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.',
+    position: 'Chief Operating Officer',
+    image: '../assets/image-thomas.jpg'
+  },
+  {
+    id: 3,
+    name: 'Jennie F.',
+    para: 'Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!',
+    position: 'Business Owner',
+    image: '../assets/image-jennie.jpg'
+  },
 ]
 
 function App() {
@@ -65,6 +91,7 @@ function App() {
         <InfoSection key={index} data={mapping} theme={theme}/>
       ))}
       <Tiles data={infoData2}/>
+      <Testimonials data={testimonials} />
     </ThemeProvider>
   );
 }

@@ -15,7 +15,7 @@ export const Tile = styled.div`
   background-image: ${(image) => image.image};
   background-size: cover;
   background-position: top;
-  height: 750px;
+  height: 800px;
   text-align: center;
   color: ${({ theme }) => theme.colors.blue2};
 
