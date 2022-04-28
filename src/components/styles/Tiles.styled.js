@@ -19,6 +19,7 @@ export const Tile = styled.div`
   text-align: center;
   color: ${({ theme }) => theme.colors.blue2};
 
+  
 
   h3 {
     font-family: "Fraunces", serif;

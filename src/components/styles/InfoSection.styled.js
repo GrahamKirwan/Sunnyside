@@ -10,6 +10,7 @@ export const StyledInfo = styled.div`
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
       width: 100%;
+      padding: 20px 0;
     }
   }
 
