@@ -6,7 +6,7 @@ export const StyledHeader = styled.header `
 
     padding: 0;
     margin: 0;
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     background-image: url("../assets/desktop/image-header.jpg");
     background-size: cover;
@@ -38,6 +38,7 @@ export const StyledHeader = styled.header `
     @media (max-width: ${({ theme }) => theme.mobile}){
     background-image: url("../assets/mobile/image-header.jpg");
         height: 80vh;
+        width: 100%;
   }
 `
 
